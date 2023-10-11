@@ -83,6 +83,14 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
+                <!-- Listar Tarefas -->
+                <x-responsive-nav-link :href="route('users.show', Auth::user()->id">
+                    {{ __('Listar Tarefas') }}
+                </x-responsive-nav-link>
+                <!-- Nova Tarefa -->
+                <x-responsive-nav-link :href="route('users.create')">
+                    {{ __('Nova Tarefas') }}
+                </x-responsive-nav-link>
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
