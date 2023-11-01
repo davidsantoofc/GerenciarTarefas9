@@ -43,8 +43,8 @@
                             {{ __('Listar Tarefas') }}
                         </x-dropdown-link>
                         <!-- Nova Tarefa -->
-                        <x-dropdown-link :href="route('logout')">
-                            {{ __('Nova Tarefas') }}
+                        <x-dropdown-link :href="route('tarefas.create')">
+                            {{ __('Nova Tarefa') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TarefaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
-});
 
+    Route::get('tarefas', [TarefaController::class, 'create'])->name('tarefas.create');
+    Route::post('tarefas', [TarefaController::class, 'store'])->name('tarefas.store');
+});
 
 require __DIR__.'/auth.php';
